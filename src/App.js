@@ -1,12 +1,10 @@
 import "./App.css";
-import { MovieCard } from "./Components/MovieCard/MovieCard";
-import { Filter } from "./Components/Filter/Filter";
-import { MovieList } from "./Components/MovieList/MovieList";
+import { Header } from "./Components/Header/Header";
 
 function App() {
   return (
     <>
-      <MovieList />
+      <Header />
     </>
   );
 }

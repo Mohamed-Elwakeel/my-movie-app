@@ -1,0 +1,16 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #a28089;
+}
+
+button {
+    background-color: #a0d2eb;
+    height: 40px;
+    color: black;
+    border-radius: 15px;
+    width: 150px;
+    border: none;
+    cursor: pointer;
+}
