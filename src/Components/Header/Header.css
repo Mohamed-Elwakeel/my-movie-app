@@ -5,7 +5,7 @@ header {
     background-color: #a28089;
 }
 
-button {
+.add-movie-btn {
     background-color: #a0d2eb;
     height: 40px;
     color: black;

@@ -1,17 +1,29 @@
-import "./MovieCard.css";
+import React, { useState } from "react";
 import movies from "../../Data/data.json";
+import "./MovieCard.css";
 
-export const MovieCard = () => {
+export const MovieCard = ({ movie }) => {
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  const handleClick = () => {
+    setIsFavorite(!isFavorite);
+  };
+
   return (
     <div className="movie-card">
-      {movies.map((movie) => (
-        <div>
-          <img key={movie.id} src={movie.posterURL} alt={movie.title} />
-          <h2 key={movie.id}>{movie.title}</h2>
-          <p key={movie.id}>{movie.description}</p>
-          <div key={movie.id}>{movie.rating}</div>
-        </div>
-      ))}
+      <img
+        className="movie-pic"
+        key={movie.id}
+        src={movie.posterURL}
+        alt={movie.title}
+      />
+      <h2 className="movie-title" key={movie.id}>
+        {movie.title}
+      </h2>
+      <p key={movie.id}>{movie.description}</p>
+      <button onClick={handleClick}>
+        {isFavorite ? "Unfavorite" : "Favorite"}
+      </button>
     </div>
   );
 };

@@ -1,0 +1,15 @@
+.movie-list {
+    background-color: cornflowerblue;
+    display: grid;
+    padding: 50px;
+    gap: 30px;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img {
+    width: 160px;
+    height: 200px;
+    object-fit: scale-down;
+}
