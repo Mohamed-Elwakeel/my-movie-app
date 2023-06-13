@@ -1,4 +1,5 @@
 import "./App.css";
+import { AddMovie } from "./Components/AddMovie/AddMovie";
 import { Header } from "./Components/Header/Header";
 import { MovieList } from "./Components/MovieList/MovieList";
 import movies from "./Data/data.json";
@@ -11,6 +12,7 @@ function App() {
     <>
       <Header />
       <MovieList movies={moviesList} />
+      <AddMovie setMoviesList={setMoviesList} />
     </>
   );
 }
