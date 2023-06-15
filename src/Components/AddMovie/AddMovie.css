@@ -1,0 +1,22 @@
+.add-movie {
+    background-color: cornflowerblue;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.add-movie-btn {
+    background-color: #a0d2eb;
+    height: 40px;
+    color: black;
+    border-radius: 15px;
+    width: 150px;
+    border: none;
+    cursor: pointer;
+}
+
+
+input:focus {
+    background-color: rgb(39, 53, 53);
+}
