@@ -1,53 +1,55 @@
-import React, { useState } from "react";
-import { MovieList } from "../MovieList/MovieList";
-import movies from "../../Data/data.json";
+import { useState } from "react";
 
-export const AddMovie = ({ setMoviesList }) => {
-  const [title, setTitle] = useState("");
-  const [posterURL, setPosterURL] = useState("");
-  const [description, setDescription] = useState("");
-  const [rating, setRating] = useState("");
+const initialState = {
+  title: "",
+  description: "",
+  posterURL: "",
+  rating: "",
+};
+
+export const AddMovie = ({ onAdd }) => {
+  const [movie, setMovie] = useState(initialState);
+
+  const onChange = (e) =>
+    setMovie({ ...movie, [e.target.name]: e.target.value });
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Add the new movie to the list
-    const newMovie = {
-      title,
-      posterURL,
-      description,
-      rating,
-    };
-    // se([...movies, newMovie]);
-    // setMoviesList([...moviesList, newMovie]);
+    onAdd(movie);
   };
+
   return (
     <div>
       <h2>Add Movie</h2>
+
       <input
-        type="text"
+        name="title"
         placeholder="Title"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
+        value={movie.title}
+        onChange={onChange}
       />
+
       <input
-        type="text"
+        name="posterURL"
         placeholder="Poster URL"
-        value={posterURL}
-        onChange={(e) => setPosterURL(e.target.value)}
+        value={movie.posterURL}
+        onChange={onChange}
       />
+
       <input
-        type="text"
+        name="description"
         placeholder="Description"
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
+        value={movie.description}
+        onChange={onChange}
       />
+
       <input
+        name="rating"
         type="number"
         placeholder="Rating"
-        value={rating}
-        onChange={(e) => setRating(e.target.value)}
+        value={movie.rating}
+        onChange={onChange}
       />
+
       <button onClick={handleSubmit}>Add Movie</button>
     </div>
   );
