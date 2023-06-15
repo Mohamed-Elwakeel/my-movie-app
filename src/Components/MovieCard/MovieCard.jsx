@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import movies from "../../Data/data.json";
 import "./MovieCard.css";
 
 export const MovieCard = ({ movie }) => {
