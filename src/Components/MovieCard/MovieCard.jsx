@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import "./MovieCard.css";
 
 export const MovieCard = ({ movie }) => {
@@ -20,6 +22,8 @@ export const MovieCard = ({ movie }) => {
         {movie.title}
       </h2>
       <p key={movie.id}>{movie.description}</p>
+      <Link to={`/${movie.id}`}>View Trailer Now!</Link>
+
       <button onClick={handleClick}>
         {isFavorite ? "Unfavorite" : "Favorite"}
       </button>
