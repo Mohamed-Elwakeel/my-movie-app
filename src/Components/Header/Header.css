@@ -1,16 +1,6 @@
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 15px;
     background-color: #a28089;
-}
-
-.add-movie-btn {
-    background-color: #a0d2eb;
-    height: 40px;
-    color: black;
-    border-radius: 15px;
-    width: 150px;
-    border: none;
-    cursor: pointer;
 }

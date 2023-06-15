@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./AddMovie.css";
 
 const initialState = {
   title: "",
@@ -18,7 +19,7 @@ export const AddMovie = ({ onAdd }) => {
   };
 
   return (
-    <div>
+    <div className="add-movie">
       <h2>Add Movie</h2>
 
       <input
@@ -50,7 +51,9 @@ export const AddMovie = ({ onAdd }) => {
         onChange={onChange}
       />
 
-      <button onClick={handleSubmit}>Add Movie</button>
+      <button onClick={handleSubmit} className="add-movie-btn">
+        Add Movie
+      </button>
     </div>
   );
 };
