@@ -7,7 +7,7 @@ export const Filter = ({ movies }) => {
 
   const filteredMovies = movies.filter((movie) => {
     return (
-      movie.title.toLowerCase().includes(title.toLowerCase()) ||
+      movie.title.toLowerCase().includes(title.toLowerCase()) &&
       movie.rating === rating
     );
   });
