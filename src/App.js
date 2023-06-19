@@ -1,26 +1,19 @@
-import { useState } from "react";
-
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 
-import { AddMovie } from "./Components/AddMovie/AddMovie";
-import { Header } from "./Components/Header/Header";
-import { MovieList } from "./Components/MovieList/MovieList";
-
 import movies from "./Data/data.json";
+import { Home } from "./Components/Home/Home";
+import { Description } from "./Components/Description/Description";
 
 function App() {
-  const [moviesList, setMoviesList] = useState(movies);
-
-  const onAddMovie = (newMovie) => {
-    setMoviesList([...moviesList, newMovie]);
-  };
-
   return (
-    <>
-      <Header />
-      <MovieList movies={moviesList} />
-      <AddMovie onAdd={onAddMovie} />
-    </>
+    <Routes>
+      <Route path="/" element={<Home />}></Route>
+      <Route
+        path="/movie/:id"
+        element={<Description movies={movies} />}
+      ></Route>
+    </Routes>
   );
 }
 

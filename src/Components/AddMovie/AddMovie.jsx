@@ -51,6 +51,13 @@ export const AddMovie = ({ onAdd }) => {
         onChange={onChange}
       />
 
+      <input
+        name="trailer"
+        placeholder="trailer"
+        value={movie.trailer}
+        onChange={onChange}
+      />
+
       <button onClick={handleSubmit} className="add-movie-btn">
         Add Movie
       </button>
